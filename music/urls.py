@@ -2,6 +2,7 @@ from django.conf.urls import url, include
 from rest_framework import routers
 from music import views
 
+# register each view to the router
 router = routers.DefaultRouter()
 router.register(r'Artist', views.ArtistViewSet)
 router.register(r'Album', views.AlbumViewSet)

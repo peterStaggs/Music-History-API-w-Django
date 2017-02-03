@@ -1,4 +1,6 @@
-from django.db import models
+from django.db import models 
+
+# Build model, which creates a table with specified fields.  
 
 class Artist(models.Model): 
 	Name = models.CharField(max_length=50, default='')
@@ -6,6 +8,7 @@ class Artist(models.Model):
 	class Meta:
 		ordering = ('Name',)
 
+# Return fields as objects using .format
 	def __str__(self):
 		return '{}'.format(self.Name)
 
@@ -14,6 +17,7 @@ class Album(models.Model):
 	Name = models.CharField(max_length=50, default='') 
 	Label = models.CharField(max_length=50, default='')
 	Year_Released = models.CharField(max_length=4, default='')
+	# bring in FK from Artist like so:
 	artist_id = models.ForeignKey(Artist, null=True)
 
 	class Meta: 

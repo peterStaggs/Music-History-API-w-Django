@@ -1,11 +1,12 @@
 from rest_framework import serializers
 from music.models import *
 
-
+# Use Hyperlinked serializers
 
 class ArtistSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Artist
+        # Include 'url' for a clickable Detail view of specific items in the browser GUI
         fields = ('id', 'url', 'Name',)
 
 class AlbumSerializer(serializers.HyperlinkedModelSerializer):

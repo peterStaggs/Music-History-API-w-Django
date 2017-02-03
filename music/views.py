@@ -23,6 +23,8 @@ class JSONResponse(HttpResponse):
         kwargs['content_type'] = 'application/json'
         super(JSONResponse, self).__init__(content, **kwargs)
 
+    # Use ViewSets to employ Django abstraction in consructing the views
+
 class ArtistViewSet(viewsets.ModelViewSet):
 
     queryset = Artist.objects.all().order_by('Name')
