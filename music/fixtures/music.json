@@ -1,0 +1,139 @@
+[{
+		"model": "music.Artist",
+		"pk": 1,
+		"fields": {
+			"Name": "Kool Keith"
+		}
+
+	}, {
+		"model": "music.Artist",
+		"pk": 2,
+		"fields": {
+			"Name": "Kenny G"
+		}
+
+	}, {
+		"model": "music.Artist",
+		"pk": 3,
+		"fields": {
+			"Name": "Saint Pepsi"
+		}
+
+	}, {
+		"model": "music.Artist", 
+		"pk": 4,
+		"fields": {
+			"Name": "HOME"
+		}
+
+	}, {
+		"model": "music.Album",
+		"pk": 1,
+		"fields": {
+			"Name": "First Come, First Served", 
+			"Label": "Funky Ass Records",
+			"Year_Released": "1999",
+			"artist_id": 1
+		}
+
+	}, {
+		"model": "music.Album",
+		"pk": 2,
+		"fields": {
+			"Name": "G Force", 
+			"Label": "Arista",
+			"Year_Released": "1983",
+			"artist_id": 2
+		}
+
+	}, {
+		"model": "music.Album",
+		"pk": 3,
+		"fields": {
+			"Name": "Hit Vibes", 
+			"Label": "Keats Collective",
+			"Year_Released": "2013",
+			"artist_id": 3
+		}
+
+	}, {
+		"model": "music.Album",
+		"pk": 4,
+		"fields": {
+			"Name": "Odyessy", 
+			"Label": "Midwest Collective",
+			"Year_Released": "2014",
+			"artist_id": 4
+		}
+
+	}, {
+		"model": "music.Genre",
+		"pk": 1,
+		"fields": {
+			"Name": "Experimental Hip-Hop" 
+		}
+
+	}, {
+		"model": "music.Genre",
+		"pk": 2,
+		"fields": {
+			"Name": "Smooth Jazz" 
+		}
+
+	}, {
+		"model": "music.Genre",
+		"pk": 3,
+		"fields": {
+			"Name": "Vaporwave" 
+		}
+
+	}, {
+		"model": "music.Genre",
+		"pk": 4,
+		"fields": {
+			"Name": "Electronic" 
+		}
+
+	}, {
+		"model": "music.Song",
+		"pk": 1,
+		"fields": {
+			"Title": "No Chorus", 
+			"artist_id": 1, 
+			"album_id": 1, 
+			"genre_id": 1
+		}
+
+	}, {
+		"model": "music.Song",
+		"pk": 2,
+		"fields": {
+			"Title": "Hi, How ya Doin", 
+			"artist_id": 2, 
+			"album_id": 2, 
+			"genre_id": 2
+		}
+
+	}, {
+		"model": "music.Song",
+		"pk": 3,
+		"fields": {
+			"Title": "Private Caller", 
+			"artist_id": 3, 
+			"album_id": 3, 
+			"genre_id": 3
+		}
+
+	}, {
+		"model": "music.Song",
+		"pk": 4,
+		"fields": {
+			"Title": "Resonance", 
+			"artist_id": 4, 
+			"album_id": 4, 
+			"genre_id": 4
+		}
+
+	}
+
+]
