@@ -18,13 +18,13 @@ class Album(models.Model):
 	Label = models.CharField(max_length=50, default='')
 	Year_Released = models.CharField(max_length=4, default='')
 	# bring in FK from Artist like so:
-	artist_id = models.ForeignKey(Artist, null=True)
+	artist = models.ForeignKey(Artist, null=True)
 
 	class Meta: 
-		ordering = ('Name', 'Label', 'Year_Released', 'artist_id')
+		ordering = ('Name', 'Label', 'Year_Released', 'artist')
 
 	def __str__(self):
-		return '{} {} {} {}'.format(self.Name, self.Label, self.Year_Released, self.artist_id)
+		return '{} {} {} {}'.format(self.Name, self.Label, self.Year_Released, self.artist)
 
 
 class Genre(models.Model): 
@@ -38,15 +38,15 @@ class Genre(models.Model):
 
 class Song(models.Model): 
 	Title = models.CharField(max_length=70, default='') 
-	artist_id = models.ForeignKey(Artist, null=True)
-	album_id = models.ForeignKey(Album, null=True)
-	genre_id = models.ForeignKey(Genre, null=True)
+	artist = models.ForeignKey(Artist, null=True)
+	album = models.ForeignKey(Album, null=True)
+	genre = models.ForeignKey(Genre, null=True)
 
 	class Meta: 
-		ordering = ('Title', 'artist_id', 'album_id', 'genre_id')
+		ordering = ('Title', 'artist', 'album', 'genre')
 
 	def __str__(self):
-		return '{} {} {} {}'.format(self.Title, self.artist_id, self.album_id, self.genre_id)
+		return '{} {} {} {}'.format(self.Title, self.artist, self.album, self.genre)
 
 
 
